@@ -501,6 +501,7 @@ public abstract class LiteTestCase extends TestCase {
                 replicationFinished = true;
                 String msg = String.format("ReplicationFinishedObserver.changed called, set replicationFinished to: %b", replicationFinished);
                 Log.d(TAG, msg);
+                Log.d("ReplicationObserver", "ReplicationFinishedObserver call!");
                 doneSignal.countDown();
             }
             else {
@@ -561,6 +562,7 @@ public abstract class LiteTestCase extends TestCase {
 
         @Override
         public void changed(Replication.ChangeEvent event) {
+            Log.d("ReplicationObserver", "ReplicationStoppedObserver call!");
             Replication replicator = event.getSource();
             if (replicator.getStatus() == Replication.ReplicationStatus.REPLICATION_STOPPED) {
                 doneSignal.countDown();
