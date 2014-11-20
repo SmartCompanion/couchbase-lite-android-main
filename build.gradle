@@ -58,7 +58,7 @@ dependencies {
     androidTestCompile 'commons-io:commons-io:2.0.1'
 
     compile buildAndroidWithArtifacts == null ?
-            project(':libraries:couchbase-lite-java-core') :
+            project(':libraries:couchbase-lite-java-core-main') :
             'com.couchbase.lite:couchbase-lite-java-core:' + System.getenv("MAVEN_UPLOAD_VERSION")
 
 }
