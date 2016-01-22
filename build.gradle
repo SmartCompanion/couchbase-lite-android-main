@@ -7,7 +7,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.1'
+        classpath 'com.android.tools.build:gradle:1.5.0'
     }
 }
 
@@ -61,7 +61,7 @@ dependencies {
             project(':libraries:couchbase-lite-java-core-main') :
             'com.couchbase.lite:couchbase-lite-java-core:' + System.getenv("MAVEN_UPLOAD_VERSION")
 
-    androidTestCompile 'com.squareup.okhttp:mockwebserver:1.2.1'
+    androidTestCompile 'com.squareup.okhttp:mockwebserver:1.3.0'
 }
 
 
